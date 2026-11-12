@@ -110,11 +110,12 @@ if (copyAddressButton) {
   const fullscreenButton = page.querySelector('[data-map-fullscreen]');
   const board = page.querySelector('.scheme-board');
 
+  const siteBase = new URL('.', document.currentScript.src);
   const floors = {
-    1: '/assets/floor-1.svg',
-    2: '/assets/floor-2.svg',
-    3: '/assets/floor-3.svg',
-    4: '/assets/floor-4.svg'
+    1: new URL('assets/floor-1.svg', siteBase).href,
+    2: new URL('assets/floor-2.svg', siteBase).href,
+    3: new URL('assets/floor-3.svg', siteBase).href,
+    4: new URL('assets/floor-4.svg', siteBase).href
   };
   const corpusViews = {
     4: [0, 360, 3012, 1962],
